@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_normal_18sp">18sp</dimen>
+
+    <dimen name="margin_layout_10dp">10dp</dimen>
+    <dimen name="margin_layout_5dp">5dp</dimen>
+</resources>

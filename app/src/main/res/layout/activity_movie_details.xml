@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundForItem"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/iv_movie_poster"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:scaleType="fitXY"
+        android:src="@drawable/place_holder_white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_id_movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_layout_10dp"
+            android:gravity="center"
+            android:lines="2"
+            android:maxLines="2"
+            android:text="Title"
+            android:textColor="@color/colorText"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_layout_10dp"
+            android:layout_marginEnd="@dimen/margin_layout_10dp"
+            android:layout_marginBottom="@dimen/margin_layout_10dp">
+            <!-- Type -->
+            <TextView
+                android:id="@+id/label_id_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/label_type"
+                android:textColor="@color/colorLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_id_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Type"
+                android:textSize="@dimen/text_size_normal_18sp"
+                android:textColor="@color/colorText"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_id_type"
+                app:layout_constraintStart_toEndOf="@id/label_id_type" />
+
+            <!-- IMDB -->
+
+            <TextView
+                android:id="@+id/label_id_imdb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/label_imdb"
+                android:textColor="@color/colorLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_id_type" />
+
+            <TextView
+                android:id="@+id/tv_id_imdb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="IMDB"
+                android:textSize="@dimen/text_size_normal_18sp"
+                android:textColor="@color/colorText"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_id_imdb"
+                app:layout_constraintStart_toEndOf="@id/label_id_imdb" />
+
+            <!-- Language -->
+            <TextView
+                android:id="@+id/label_id_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/label_language"
+                android:textColor="@color/colorLabel"
+                app:layout_constraintStart_toEndOf="@id/tv_id_type"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_id_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="EN"
+                android:textSize="@dimen/text_size_normal_18sp"
+                android:textColor="@color/colorText"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_id_language"
+                app:layout_constraintStart_toEndOf="@id/label_id_language" />
+
+            <!-- Release Date -->
+            <TextView
+                android:id="@+id/label_id_release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/label_released_on"
+                android:textColor="@color/colorLabel"
+                app:layout_constraintStart_toStartOf="@id/label_id_language"
+                app:layout_constraintTop_toBottomOf="@id/label_id_language" />
+
+            <TextView
+                android:id="@+id/tv_id_release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="DATE"
+                android:textSize="@dimen/text_size_normal_18sp"
+                android:textColor="@color/colorText"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_id_release_date"
+                app:layout_constraintStart_toEndOf="@id/label_id_release_date" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <TextView
+                android:id="@+id/tv_id_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_layout_10dp"
+                android:layout_marginBottom="@dimen/margin_layout_10dp"
+                android:text="Description"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/text_size_normal_18sp" />
+        </ScrollView>
+
+
+    </LinearLayout>
+</LinearLayout>
+
+
